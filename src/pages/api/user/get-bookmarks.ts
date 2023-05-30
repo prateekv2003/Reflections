@@ -18,6 +18,7 @@ const addBookmark = async (req: NextApiRequest, res: NextApiResponse) => {
         },
       },
     });
+    
 
     if (!user) {
       res.status(400).json({ message: "User does not exist" });

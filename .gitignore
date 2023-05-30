@@ -6,6 +6,7 @@
 .pnp.js
 /scrapper
 /ml/*.csv
+/ml/datasets/*.csv
 /ml/*.pkl
 /ml/__pycache__
 /ml/.ipynb_checkpoints

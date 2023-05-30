@@ -27,9 +27,11 @@ app.add_middleware(
 
 clf = pickle.load(open("sentiment.pkl",'rb'))
 vectorizer = pickle.load(open("transform.pkl", "rb"))
-df = pd.read_csv("medium_articles_cleaned.csv")
-with gzip.open('sim.pklz', 'rb') as ifp:
-    sim = pickle.load(ifp)
+df = pd.read_csv('datasets/medium_articles_cleaned.csv')
+# with gzip.open('sim.pklz', 'rb') as ifp:
+#     sim = pickle.load(ifp)
+import joblib
+sim = joblib.load("similarity.pkl")
 
 electra_tokenizer = ElectraTokenizer.from_pretrained('google/electra-small-generator')
 electra_model = ElectraForMaskedLM.from_pretrained('google/electra-small-generator').eval()
@@ -134,3 +136,6 @@ async def Summarizer(body: SummerizerModel):
 async def Corrector(body: CorrectorModel):
     result = fastpunct.punct(body.text, correct=True)
     return {"result": result}
+
+# if __name__ == "__main__":
+#     uvicorn.run(app)

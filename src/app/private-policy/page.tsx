@@ -10,7 +10,8 @@ const page = (props: Props) => {
         <h1 className="text-2xl font-medium mb-6 text-center">
           Privacy Policy
         </h1>
-        <h2 className="text-xl font-medium">Information We Collect</h2>
+        <h2 className="text-xl font-medium">Information We Collect</h2> 
+        
         <p className="text-base leading-relaxed">
           At Reflection, we are committed to protecting the privacy and security
           of our users. This Privacy Policy explains how we collect, use, and

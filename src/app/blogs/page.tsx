@@ -13,6 +13,7 @@ const CategoryPage = (props: Props) => {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   console.log(search);
 
+  
   const fetchBlogs = async (q: string) => {
     fetch(`/api/category?category=${q}&page=1`)
       .then((res) => res.json())
