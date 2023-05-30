@@ -3,9 +3,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 
   ## To run ML model:
-  !!! Normally install all the requirements form requirements.txt
-  !!! Go to ml folder and run the main.py using ```uvicorn main:app --reload```
-  !!! install gensim=3.6.0 as other will give error -> ```python pip3 install gensim==3.6.0```
+  * Normally install all the requirements form requirements.txt
+  * Go to ml folder and run the main.py using ```uvicorn main:app --reload```
+  * install gensim=3.6.0 as other will give error -> ```python pip3 install gensim==3.6.0```
   #### Then for this error :
  ```
   File "C:\Users\hp\AppData\Roaming\Python\Python310\site-packages\gensim\corpora\dictionary.py", line 11, in <module>
